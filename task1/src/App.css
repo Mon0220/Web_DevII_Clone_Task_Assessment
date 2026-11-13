@@ -1,0 +1,381 @@
+/* General styling for the webpage */
+body {
+  margin: 0;
+  background-color: #e9e9e9;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Arrange navigation links in a horizontal row */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Display article text in three columns */
+.article-columns {
+  column-count: 3;
+  column-gap: 25px;
+}
+
+/* Style the usernames in the comments section */
+.comment h3 {
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+
+/* Remove the default margin from comment paragraphs */
+.comment p {
+  margin: 0;
+}
+
+/* Initial footer styling */
+.footer {
+  margin-top: 0;
+  padding: 50px;
+  background: #14181d;
+  color: white;
+  text-align: center;
+}
+
+/* Add spacing around the footer text */
+.footer p {
+  margin: 30px 0;
+}
+
+/* Arrange footer social icons in a horizontal row */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* TABLET RESPONSIVE STYLING */
+/* Adjust the layout for screens smaller than 900px */
+@media (max-width: 900px) {
+
+  /* Reduce padding on the main sections */
+  .header, .article, .author-section, .comments, .footer {
+    padding: 30px;
+  }
+
+  /* Reduce the main article heading size */
+  .article h1 {
+    font-size: 64px;
+  }
+
+  /* Reduce the section heading sizes */
+  .article .subtitle, .article-columns h2,
+  .author-text h2, .comments h2 {
+    font-size: 36px;
+  }
+
+  /* Display article text in two columns */
+  .article-columns {
+    column-count: 2;
+  }
+
+  /* Adjust the author section columns */
+  .author-section {
+    grid-template-columns: 1fr 160px 50px;
+  }
+
+  /* Make the author image smaller */
+  .author-image {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* MOBILE RESPONSIVE STYLING */
+/* Adjust the layout for screens smaller than 600px */
+@media (max-width: 600px) {
+
+  /* Reduce section padding for mobile screens */
+  .header, .article, .author-section, .comments, .footer {
+    padding: 20px;
+  }
+
+  /* Reduce the logo size */
+  .logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 25px;
+  }
+
+  /* Reduce spacing and font size in navigation */
+  .navigation, .footer-nav {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  /* Make the main heading smaller */
+  .article h1 {
+    font-size: 44px;
+  }
+
+  /* Make the subtitle smaller */
+  .article .subtitle {
+    font-size: 28px;
+  }
+
+  /* Adjust the introduction text size */
+  .introduction {
+    font-size: 18px;
+  }
+
+  /* Display article text in one column */
+  .article-columns {
+    column-count: 1;
+  }
+
+  /* Display gallery images in two columns */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Make the first gallery image span two columns */
+  .gallery img:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  /* Stack author content vertically */
+  .author-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* Position the author image above the text */
+  .author-image {
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  /* Arrange author social icons horizontally */
+  .author-social {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* PAGE LAYOUT */
+
+/* Centre the header and set its maximum width */
+.header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 50px 0;
+}
+
+/* Style and centre the website logo */
+.logo {
+  display: block;
+  width: 200px;
+  margin: 0 auto 50px;
+}
+
+/* Arrange the header navigation links */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+/* Remove underlines and set navigation link colour */
+.navigation a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Style the main content container */
+main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+/* Add spacing inside the article */
+.article {
+  padding: 50px;
+}
+
+/* GALLERY SECTION */
+
+/* Create a four-column gallery using CSS Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Make images fill their grid cells */
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Make the first image larger than the others */
+.gallery img:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* AUTHOR SECTION */
+
+/* Arrange the author text and image using CSS Grid */
+.author-section {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  align-items: center;
+  gap: 25px;
+  padding: 50px;
+}
+
+/* Style the author heading */
+.author-text h2 {
+  font-size: 48px;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+/* Remove extra spacing from the author paragraph */
+.author-text p {
+  margin: 0;
+}
+
+/* Make the author's profile image circular */
+.author-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* SOCIAL MEDIA ICONS */
+
+/* Centre social media icons horizontally */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Set the size of social media icons */
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* COMMENTS SECTION */
+
+/* Add a grey background and spacing */
+.comments {
+  padding: 50px;
+  background-color: #d3d3d3;
+}
+
+/* Style the comments heading */
+.comments h2 {
+  font-size: 48px;
+  margin: 0 0 25px;
+}
+
+/* Add space between individual comments */
+.comment {
+  margin-bottom: 25px;
+}
+
+/* Style comment usernames */
+.comment h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
+
+/* Remove default paragraph spacing */
+.comment p {
+  margin: 0;
+}
+
+/* FOOTER INITIAL STYLING */
+
+/* Set the footer background, text colour and padding */
+.footer {
+  background-color: #14181d;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Add spacing around footer text */
+.footer p {
+  margin: 20px 0;
+}
+
+/* AUTHOR SECTION ADJUSTMENTS */
+
+/* Add a third column for the author social icons */
+.author-section {
+  grid-template-columns: 1fr 200px 50px;
+}
+
+/* Stack author social media icons vertically */
+.author-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Set the size of author social icons */
+.author-social img {
+  width: 50px;
+  height: 50px;
+}
+
+/* FINAL FOOTER STYLING */
+
+/* Set the final footer colours and add a top border */
+.footer {
+  padding: 30px 50px;
+  background-color: #d3d3d3;
+  color: black;
+  border-top: 1px solid #888;
+}
+
+/* Space footer navigation links evenly */
+.footer-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+/* Style footer navigation links */
+.footer-navigation a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Centre the copyright text */
+.footer p {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Centre the footer social media icons */
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Set a smaller size for footer social icons */
+.footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}

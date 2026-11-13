@@ -1,0 +1,16 @@
+/* General website styling */
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
+/* Headings and buttons use the Teko font */
+h1, h2, h3, button {
+  font-family: 'Teko', sans-serif;
+}
+
+/* Prevent elements from exceeding their width */
+* {
+  box-sizing: border-box;
+}
